@@ -11,4 +11,12 @@ class ViewController extends Controller
         //source untuk data / proses bisnis yg di olah
         return view('ets') ;
     }
+    function showForm() {
+        //source untuk data / proses bisnis yg di olah
+        return view('form') ;
+    }
+    function showphp() {
+        //source untuk data / proses bisnis yg di olah
+        return view('hasil') ;
+    }
 }
