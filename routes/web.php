@@ -21,3 +21,5 @@ Route::get('praktikumduaa', function () {
     return view('praktikum2');
 });
 Route::get('ets2021',"ViewController@showETS") ;
+Route::get('form',"ViewController@showForm") ;
+Route::get('hasil',"ViewController@showphp") ;
