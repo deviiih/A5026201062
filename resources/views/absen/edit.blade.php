@@ -7,12 +7,12 @@
     @section('konten')
 
      @foreach($absen as $a)
-     <p><a href="/absen"> <u>Kembali</u></a></p>
+        <br><br>
      <form action="/absen/update" method="post">
          {{ csrf_field() }}
          <input type="hidden" name="id" value="{{ $a->ID }}">
          <div class="form-group">
-             <label for="idpegawaiedit" class="col-sm-2 control-label">ID Pegawai :</label>
+             <label for="idpegawaiedit" class="col-sm-2 control-label">ID Pegawai:</label>
              <select name="idpegawai" >
                  @foreach($pegawai as $p)
                  <option value="{{ $p->pegawai_id }}" @if ($p->pegawai_id === $a->IDPegawai ) selected="selected" @endif>{{ $p->pegawai_nama }}</option>
@@ -49,8 +49,14 @@
                  <label for="css">Sakit</label><br>
                  <input type="radio" id="javascript" name="status" value="A"  @if ($a->Status === "A" ) checked="checked" @endif>
                  <label for="javascript">Alpha</label>
-         <p style="text-align: center"><input type="submit" class="btn btn-primary" value="Simpan Data"></p>
-     </form>
+         <div class="row">
+            <div class="col-sm-2 vertical-center">
+                <p><input type="submit" class="btn btn-success" value="Simpan Data" style="align-content: center"></p>
+            </div>
+            <div class="col-sm-2 vertical-center">
+                <a href="/absen" class="btn btn-primary btn-danger" role="button" style="align-content: center">Kembali</a>
+            </div>
+        </form>
      @endforeach
 
     @endsection

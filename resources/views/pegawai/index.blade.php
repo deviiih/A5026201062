@@ -9,7 +9,7 @@
 	<br/>
 	<br/>
 
-	<table border="1">
+	<table border="2">
 		<tr>
 			<th>Nama</th>
 			<th>Jabatan</th>
@@ -24,13 +24,16 @@
 			<td>{{ $p->pegawai_umur }}</td>
 			<td>{{ $p->pegawai_alamat }}</td>
 			<td>
-				<a href="/pegawai/edit/{{ $p->pegawai_id }}">Edit</a>
-				|
-				<a href="/pegawai/hapus/{{ $p->pegawai_id }}">Hapus</a>
+                <a class="btn btn-warning btn-sm" href="/pegawai/edit/{{ $p->pegawai_id }}">Edit</a>
+                 |
+                 <a class="btn btn-danger btn-sm" href="/pegawai/hapus/{{ $p->pegawai_id }}">Delete</a>
 			</td>
 		</tr>
-		@endforeach
+        @endforeach
 	</table>
+
+    <br>
+    <a href="/absen/add" class="btn btn-primary btn-block" role="button" align ="center">+ Tambah Absensi</a>
 
     @endsection
 

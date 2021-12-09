@@ -4,9 +4,6 @@
     @section('judulhalaman', 'Daftar Absensi Pegawai')
 
     @section('konten')
-
-     <a href="/absen/add"> + Tambah Absensi</a>
-
      <br/>
      <br/>
 
@@ -32,6 +29,8 @@
          </tr>
          @endforeach
      </table>
+     <a href="/absen/add" class="btn btn-primary btn-block" role="button" align ="center">+ Tambah Absensi</a>
+     <br>
      <p>
          Keterangan Status: <br>
          I : Izin <br>
