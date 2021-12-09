@@ -4,7 +4,7 @@
     @section('judulhalaman', 'Daftar Absensi Pegawai')
 
     @section('konten')
-     <br/>
+    <h1 style="text-align: center">Data Absen</h1>
      <br/>
 
      <table class="table table-bordered">

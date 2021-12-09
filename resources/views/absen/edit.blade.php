@@ -5,7 +5,7 @@
 
 
     @section('konten')
-
+    <h1 style="text-align: center">Edit Data Absen</h1>
      @foreach($absen as $a)
         <br><br>
      <form action="/absen/update" method="post">

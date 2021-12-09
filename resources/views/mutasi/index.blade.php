@@ -3,16 +3,10 @@
 @section('judulhalaman', 'Daftar Mutasi Pegawai')
 
 @section('konten')
-
-	<h2>Perpindahan Mutasi</h2>
-	<h3>Data Mutasi</h3>
-
-	<a href="/mutasi/tambah"> + Tambah Mutasi Baru</a>
-
-	<br/>
+	<h3 style="text-align: center">Data Mutasi</h3>
 	<br/>
 
-	<table border="1">
+	<table border="3" style="align-content: center">
 		<tr>
 			<th>ID</th>
 			<th>IDPegawai</th>
@@ -30,13 +24,14 @@
 			<td>{{ $m->MulaiBertugas }}</td>
 			<td>
 
-				<a href="/mutasi/edit/{{ $m->ID }}">Edit</a>
+				<a class="btn btn-warning btn-sm" href="/mutasi/edit/{{ $m->ID }}">Edit</a>
 				|
-				<a href="/mutasi/hapus/{{ $m->ID }}">Hapus</a>
+				<a class="btn btn-danger btn-sm" href="/mutasi/hapus/{{ $m->ID }}">Hapus</a>
 			</td>
 		</tr>
 		@endforeach
 	</table>
+    <br><a href="/mutasi/tambah" class="btn btn-primary btn-block" role="button" align ="center"> + Tambah Mutasi Baru</a>
     @endsection
 
 

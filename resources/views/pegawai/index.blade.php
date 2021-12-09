@@ -3,10 +3,7 @@
 @section('judulhalaman', 'Tabel Pegawai')
 
 @section('konten')
-
-	<a href="/pegawai/tambah"> + Tambah Pegawai Baru</a>
-
-	<br/>
+<h1 style="text-align: center">Data Pegawai</h1>
 	<br/>
 
 	<table border="2">
@@ -33,7 +30,7 @@
 	</table>
 
     <br>
-    <a href="/absen/add" class="btn btn-primary btn-block" role="button" align ="center">+ Tambah Absensi</a>
+    <a href="/pegawai/tambah" class="btn btn-primary btn-block" role="button" align ="center">+ Tambah Pegawai Baru</a>
 
     @endsection
 

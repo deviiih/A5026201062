@@ -3,7 +3,7 @@
 @section('judulhalaman', 'Daftar Absensi Pegawai')
 
 @section('konten')
-
+<h1 style="text-align: center">Tambah Data Absen</h3>
 
 <form action="/absen/store" method="post">
     {{ csrf_field() }}

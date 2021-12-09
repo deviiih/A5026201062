@@ -3,22 +3,25 @@
 @section('judulhalaman', 'Tambah Pegawai')
 
 @section('konten')
-
-
-	<h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
-	<h3>Data Pegawai</h3>
-
-	<a href="/pegawai"> Kembali</a>
-
-	<br/>
+<h1 style="text-align: center">Tambah Data Pegawai</h1>
 	<br/>
 
 	<form action="/pegawai/store" method="post">
 		{{ csrf_field() }}
-		Nama <input type="text" name="nama" required="required"> <br/>
-		Jabatan <input type="text" name="jabatan" required="required"> <br/>
-		Umur <input type="number" name="umur" required="required"> <br/>
-		Alamat <textarea name="alamat" required="required"></textarea> <br/>
-		<input type="submit" value="Simpan Data">
+        <label for="fname">Nama :</label><br>
+		<input type="text" name="nama" required="required"> <br/>
+		<label for="jabatan">Jabatan :</label><br>
+        <input type="text" name="jabatan" required="required"> <br/>
+		<label for="umur">Umur :</label><br>
+        <input type="number" name="umur" required="required"> <br/>
+		<label for="alamat">Alamat :</label><br>
+        <textarea name="alamat" required="required"></textarea> <br/><br>
+        <div class="row">
+            <div class="col-sm-2">
+                <p><input type="submit" class="btn btn-success" value="Simpan Data"></p>
+            </div>
+            <div class="col-sm-2">
+                <a href="/pegawai" class="btn btn-primary btn-block" role="button" align ="center">Kembali</a>
+            </div>
 	</form>
     @endsection
