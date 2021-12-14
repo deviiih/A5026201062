@@ -11,10 +11,15 @@ class AbsenController extends Controller
     public function indexabsen()
     {
         // mengambil data dari table absen
-        $absen = DB::table('absen')->get();
+        //$absen = DB::table('absen')->get();
+        $absen = DB::table('absen')
+        ->join('pegawai', 'absen.ID', '=', 'pegawai.pegawai_id')
+        ->select('absen.*', 'pegawai.pegawai_nama')
+        ->paginate(3);
 
         // mengirim data absen ke view indexabsen
         return view('absen.indexabsen', ['absen' => $absen]);
+
     }
     // method untuk menampilkan view form tambah absen
     public function add()
@@ -73,4 +78,12 @@ class AbsenController extends Controller
         // alihkan halaman ke halaman absen
         return redirect('/absen');
     }
+    public function view($id)
+    {
+        // mengambil data pegawai berdasarkan id yang dipilih
+        $absen = DB::table('absen')->where('IDPegawai', $id)->get();
+        // passing data pegawai yang didapat ke view edit.blade.php
+        return view('absen.detail', ['mutasi' => $absen]);
+    }
+
 }
