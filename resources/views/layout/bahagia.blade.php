@@ -58,7 +58,7 @@
                 <a href="/pegawai"> Pegawai </a><br>
                 <a href="/absen"> Absen </a><br>
                 <a href="/mutasi"> Mutasi </a><br>
-                <a href=""> Praktikum </a><br>
+                <a href="/hewan"> Praktikum </a><br>
             </div>
             <div class="col-sm-9">
                 @section('konten')

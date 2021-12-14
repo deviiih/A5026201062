@@ -46,4 +46,11 @@ Route::post('/absen/store','AbsenController@store');
 Route::get('/absen/edit/{id}','AbsenController@edit');
 Route::post('/absen/update','AbsenController@update');
 Route::get('/absen/hapus/{id}','AbsenController@hapus');
+//route CRUD hewan
+Route::get('/hewan','HewanController@index');
+Route::get('/hewan/add','HewanController@add');
+Route::post('/hewan/store','HewanController@store');
+Route::get('/hewan/edit/{id}','HewanController@edit');
+Route::post('/hewan/update','HewanController@update');
+Route::get('/hewan/hapus/{id}','HewanController@hapus');
 

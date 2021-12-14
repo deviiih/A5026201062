@@ -19,12 +19,13 @@
         <input type="text" name="SubDepartemen" required="required"><br/>
         <label for="MulaiBertugas">MulaiBertugas :</label><br>
         <input type="datetime-local" name="MulaiBertugas" required="required"><br/><br>
+        <div class="row">
+            <div class="col-sm-2">
+                <input type="submit" role="button" class="btn btn-success" value="Simpan Data">
+            </div>
+            <div class="col-sm-2">
+                <a href="/mutasi" class="btn btn-primary btn-block" role="button" align ="center">Kembali</a>
+            </div>
 	</form>
-    <div class="row">
-        <div class="col-sm-2">
-            <p><input type="submit" class="btn btn-success" value="Simpan Data"></p>
-        </div>
-        <div class="col-sm-2">
-            <a href="/mutasi" class="btn btn-primary btn-block" role="button" align ="center">Kembali</a>
-        </div>
+
     @endsection

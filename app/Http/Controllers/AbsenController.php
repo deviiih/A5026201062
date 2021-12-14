@@ -85,5 +85,17 @@ class AbsenController extends Controller
         // passing data pegawai yang didapat ke view edit.blade.php
         return view('absen.detail', ['mutasi' => $absen]);
     }
+    public function cari(Request $request)
+	{
+		// menangkap data pencarian
+		$cari = $request->cari;
 
+    		// mengambil data dari table pegawai sesuai pencarian data
+		$absen = DB::table('mutasi')
+		->where('pegawai_nama','like',"%".$cari."%")
+		->paginate();
+
+    		// mengirim data pegawai ke view index
+		return view('absen.index',['absen' => $absen]);
+    }
 }
