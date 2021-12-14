@@ -60,7 +60,7 @@
                 <a href="/mutasi"> Mutasi </a><br>
                 <a href=""> Praktikum </a><br>
             </div>
-            <div class="col-sm-7">
+            <div class="col-sm-9">
                 @section('konten')
                 @show
             </div>
