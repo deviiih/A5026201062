@@ -45,16 +45,15 @@ class HewanController extends Controller
         // passing data pegawai yang didapat ke view edit.blade.php
         return view('hewan.edit', ['hewan' => $hewan]);
     }
-    // update data pegawai
     public function update(Request $request)
     {
-        // update data pegawai
+        // update data
         DB::table('hewan')->where('kodehewan', $request->id)->update([
             'namahewan' => $request->namahewan,
             'jumlahhewan' => $request->jumlahhewan,
             'tersedia' => $request->tersedia
         ]);
-        // alihkan halaman ke halaman pegawai
+        // alihkan halaman ke halaman
         return redirect('/hewan');
     }
     // method untuk hapus data pegawai
