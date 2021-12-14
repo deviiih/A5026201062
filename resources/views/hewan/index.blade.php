@@ -17,6 +17,7 @@
 
              <th>Nama Hewan</th>
              <th>Status</th>
+             <th>Opsi</th>
          </tr>
          @foreach($hewan as $h)
          <tr>
@@ -24,7 +25,7 @@
              <td>{{ $h->namahewan }}</td>
              <td>{{ $h->tersedia }}</td>
              <td>
-                <a href="/absen/detail/{{ $h->kodehewan }}" class="btn btn-default btn-sm" role="button">View Detail</a>
+                <a href="/hewan/detail/{{ $h->kodehewan }}" class="btn btn-default btn-sm" role="button">View Detail</a>
                 |
                  <a class="btn btn-warning btn-sm" href="/hewan/edit/{{ $h->kodehewan }}">Edit</a>
                  |
@@ -34,6 +35,11 @@
          @endforeach
      </table>
      {{ $hewan->links() }}
-     <a href="/absen/add" class="btn btn-primary btn-block" role="button" align ="center">+ Tambah Hewan</a>
+     <a href="/hewan/add" class="btn btn-primary btn-block" role="button" align ="center">+ Tambah Hewan</a>
      <br>
+     <p>
+        Keterangan Status: <br>
+        Y : Iya (Tersedia) <br>
+        G : Tidak (Tidak Tersedia) <br>
+    </p>
      @endsection

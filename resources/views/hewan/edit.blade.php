@@ -13,16 +13,16 @@
      <input type="hidden" name="kodehewan" value="{{ $h->kodehewan }}">
      <div class="form-group">
          <label for="namahewanedit" class="col-sm-2 control-label">Nama Hewan:</label>
-         <input type="text" name="namahewan" value="{{ $h->namahewan }}" required="required"> <br/>
+         <input type="text" name="nama" value="{{ $h->namahewan }}" required="required"> <br/>
          <label for="jumlah" class="col-sm-2 control-label">Jumlah Hewan:</label>
-         <input type="number" name="jumlahhewan" value="{{ $h->jumlahhewan }}" required="required"> <br/>
+         <input type="number" name="jumlah" value="{{ $h->jumlahhewan }}" required="required"> <br/>
      </div>
      <br>
 
              Status <br />
-             <input type="radio" id="y" name="status" value="Y" @if ($h->Status === "Y" ) checked="checked" @endif>
+             <input type="radio" id="y" name="status" value="Y" @if ($h->tersedia === "Y" ) checked="checked" @endif>
              <label for="y">Iya (Tersedia)</label><br>
-             <input type="radio" id="g" name="status" value="G" @if ($h->Status === "G" ) checked="checked" @endif>
+             <input type="radio" id="g" name="status" value="G" @if ($h->tersedia === "G" ) checked="checked" @endif>
              <label for="g">Tidak (Tidak Tersedia)</label><br>
      <div class="row">
         <div class="col-sm-2 vertical-center">
@@ -33,6 +33,14 @@
         </div>
     </form>
  @endforeach
+  <p>
+      <br>
+      <br>
+      <br>
+        Keterangan Status: <br>
+        Y : Iya (Tersedia) <br>
+        G : Tidak (Tidak Tersedia) <br>
+    </p>
 
 @endsection
 

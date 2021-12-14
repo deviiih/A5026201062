@@ -13,9 +13,9 @@
 		<label for="umur">Jumlah Hewan :</label><br>
         <input type="number" name="jumlahhewan" required="required"> <br/>
         <label for="tersedia">Status :</label><br>
-        <input type="radio" id="y" name="status" value="Y">
+        <input type="radio" id="y" name="tersedia" value="Y" >
         <label for="y">Y</label><br>
-        <input type="radio" id="g" name="status" value="G">
+        <input type="radio" id="g" name="tersedia" value="G">
         <label for="g">G</label><br>
 
         <div class="row">
@@ -27,9 +27,14 @@
             </div>
 	</form>
     <br>
+    <br>
+    <div>
+
     <p>
+        <br>
         Keterangan Status: <br>
         Y : Iya (Tersedia) <br>
         G : Tidak (Tidak Tersedia) <br>
     </p>
+    </div>
     @endsection

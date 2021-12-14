@@ -72,7 +72,7 @@ class HewanController extends Controller
 		$cari = $request->cari;
 
     		// mengambil data dari table pegawai sesuai pencarian data
-		$hewan = DB::table('pegawai')
+		$hewan = DB::table('hewan')
 		->where('namahewan','like',"%".$cari."%")
 		->paginate();
 
@@ -85,6 +85,6 @@ class HewanController extends Controller
         // mengambil data pegawai berdasarkan id yang dipilih
         $hewan = DB::table('hewan')->where('kodehewan', $id)->get();
         // passing data pegawai yang didapat ke view edit.blade.php
-        return view('hewan.detail', ['pegawai' => $hewan]);
+        return view('hewan.detail', ['hewan' => $hewan]);
     }
 }

@@ -53,4 +53,6 @@ Route::post('/hewan/store','HewanController@store');
 Route::get('/hewan/edit/{id}','HewanController@edit');
 Route::post('/hewan/update','HewanController@update');
 Route::get('/hewan/hapus/{id}','HewanController@hapus');
+Route::get('/hewan/cari','HewanController@cari');
+Route::get('/hewan/detail/{id}','HewanController@view');
 
