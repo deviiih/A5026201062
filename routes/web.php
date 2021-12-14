@@ -30,6 +30,8 @@ Route::post('/pegawai/store','PegawaiController@store');
 Route::get('/pegawai/edit/{id}','PegawaiController@edit');
 Route::post('/pegawai/update','PegawaiController@update');
 Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
+Route::get('/pegawai/cari','PegawaiController@cari');
+Route::get('/pegawai/detail/{id}','PegawaiController@view');
 //route CRUD
 Route::get('/mutasi','MutasiController@index');
 Route::get('/mutasi/tambah','MutasiController@tambah');
@@ -44,3 +46,4 @@ Route::post('/absen/store','AbsenController@store');
 Route::get('/absen/edit/{id}','AbsenController@edit');
 Route::post('/absen/update','AbsenController@update');
 Route::get('/absen/hapus/{id}','AbsenController@hapus');
+
