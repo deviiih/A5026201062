@@ -5,8 +5,14 @@
 @section('konten')
 <h1 style="text-align: center">Data Pegawai</h1>
 	<br/>
-
-	<table border="2">
+    <div class="col" align="end" >
+	<form action="/pegawai/cari" method="GET">
+		<input type="text" name="cari" placeholder="Cari Pegawai .." value="{{ old('cari') }}">
+		<input type="submit" value="CARI">
+	</form>
+    </div>
+    <br>
+	<table class = "table" border="2">
 		<tr>
 			<th>Nama</th>
 			<th>Jabatan</th>
@@ -21,16 +27,19 @@
 			<td>{{ $p->pegawai_umur }}</td>
 			<td>{{ $p->pegawai_alamat }}</td>
 			<td>
-                <a class="btn btn-warning btn-sm" href="/pegawai/edit/{{ $p->pegawai_id }}">Edit</a>
-                 |
-                 <a class="btn btn-danger btn-sm" href="/pegawai/hapus/{{ $p->pegawai_id }}">Delete</a>
+                <a href="/pegawai/detail/{{ $p->pegawai_id }}" class="btn btn-default btn-sm" role="button">View Detail</a>
+                |
+				<a href="/pegawai/edit/ {{ $p->pegawai_id }}" class="btn btn-warning" role="button">Edit</a>
+				|
+				<a href="/pegawai/hapus/{{ $p->pegawai_id }}" class="btn btn-danger" role="button">Hapus</a>
 			</td>
 		</tr>
         @endforeach
 	</table>
-
+    {{ $pegawai->links() }}
     <br>
     <a href="/pegawai/tambah" class="btn btn-primary btn-block" role="button" align ="center">+ Tambah Pegawai Baru</a>
+
 
     @endsection
 
