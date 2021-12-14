@@ -8,7 +8,6 @@
 
 	<table border="3" style="align-content: center">
 		<tr>
-			<th>ID</th>
 			<th>IDPegawai</th>
 			<th>Departemen</th>
 			<th>SubDepartemen</th>
@@ -17,8 +16,7 @@
 		</tr>
 		@foreach($mutasi as $m)
 		<tr>
-			<td>{{ $m->ID }}</td>
-			<td>{{ $m->IDPegawai }}</td>
+			<td>{{ $m->pegawai_nama }}</td>
 			<td>{{ $m->Departemen }}</td>
             <td>{{ $m->SubDepartemen }}</td>
 			<td>{{ $m->MulaiBertugas }}</td>
