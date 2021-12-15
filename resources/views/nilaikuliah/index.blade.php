@@ -20,6 +20,19 @@
 			<td>{{ $k->NRP }}</td>
             <td>{{ $k->NilaiAngka }}</td>
 			<td>{{ $k->SKS }}</td>
+            <td>
+                <?php
+                    if($n->NilaiAngka <=40){
+                        echo "D";
+                    } elseif ($k->NilaiAngka >=41 && $k->NilaiAngka <=60) {
+                        echo "C";
+                    } elseif ($k->NilaiAngka >=61 && $k->NilaiAngka <=80) {
+                        echo "B";
+                    } else{
+                        echo "A";
+                    }
+                    ?>
+            </td>
             <td>{{ $k->SKS * $k->NilaiAngka }}</td>
 		</tr>
 		@endforeach
