@@ -59,6 +59,7 @@
                 <a href="/absen"> Absen </a><br>
                 <a href="/mutasi"> Mutasi </a><br>
                 <a href="/hewan"> Praktikum </a><br>
+                <a href="/nilaikuliah"> EAS </a><br>
             </div>
             <div class="col-sm-9">
                 @section('konten')
